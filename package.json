@@ -7,13 +7,29 @@
     "build": "babel src -d build",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "lint": "eslint lib/*",
+    "prettier": "prettier-eslint --write \"{lib/**/*.js, test/**/*.js}\"",
     "test": "mocha ./test/*.js",
     "test-travis": "npm run lint && npm run build && npm run test",
     "watch": "babel-watch src"
   },
   "eslintConfig": {
-    "extends": "eslint-config-synacor"
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint-config-synacor",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "babel"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -26,10 +42,15 @@
   },
   "homepage": "https://github.com/juniorbird/growthcycle#readme",
   "devDependencies": {
+    "babel-eslint": "^7.2.2",
     "chai": "^3.5.0",
     "colortape": "^0.1.2",
     "coveralls": "^2.13.0",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^1.6.0",
     "eslint-config-synacor": "^1.0.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-react": "^6.10.3",
     "husky": "^0.13.3",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",

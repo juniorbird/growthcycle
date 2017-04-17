@@ -6,5 +6,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b42225eff69b498f9797f2062f7fe39b)](https://www.codacy.com/app/wade_2/growthcycle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=juniorbird/growthcycle&amp;utm_campaign=Badge_Grade)
 [![David-DM Dependencies](https://david-dm.org/juniorbird/growthcycle.svg)](https://david-dm.org/juniorbird/growthcycle)
 [![Known Vulnerabilities](https://snyk.io/test/github/juniorbird/growthcycle/badge.svg)](https://snyk.io/test/github/juniorbird/growthcycle)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 This has all happened before, and it will all happen again. Let's learn from it this time. With badges.
