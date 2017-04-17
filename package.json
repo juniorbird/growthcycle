@@ -1,0 +1,30 @@
+{
+  "name": "growthcycle",
+  "version": "0.0.1",
+  "description": "Learn from your life",
+  "main": "index.js",
+  "scripts": {
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "test": "mocha -- -R spec ./test/*.js",
+    "test-travis": "npm run build && npm run test",
+    "build": "babel src -d build",
+    "watch": "babel-watch src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorbird/growthcycle.git"
+  },
+  "author": "Wade Armstrong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juniorbird/growthcycle/issues"
+  },
+  "homepage": "https://github.com/juniorbird/growthcycle#readme",
+  "devDependencies": {
+    "colortape": "^0.1.2",
+    "coveralls": "^2.13.0",
+    "eslint-config-synacor": "^1.0.0",
+    "istanbul": "^0.4.5"
+  }
+}
